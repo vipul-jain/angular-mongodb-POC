@@ -14,6 +14,8 @@ Create Database
 
 2. This will create a database named samajseva with a colletion named admin having username as "admin" and password as "123"
 
+3. More information regarding creation of database and collection can be found [here] (http://www.mkyong.com/mongodb/how-to-create-database-or-collection-in-mongodb/)
+
 Express server configuration 
 ============================
 
@@ -84,5 +86,7 @@ Express server configuration
 Run Application
 ===============
 Once you get this message you can open in your browser [http://localhost:3000] (http://localhost:3000/)  and  there comes the index page, 
-login in Admin panel with username "admin" and password "123"		 
+login in Admin panel with username "admin" and password "123"
+
+== NOTE : Structure of application CRUD operations can be found [here] (http://www.phloxblog.in/single-page-application-angular-js-node-js-mongodb-mongojs-module/#.UgCZTjegu5s)
  

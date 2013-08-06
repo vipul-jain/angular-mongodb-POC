@@ -83,5 +83,6 @@ Express server configuration
 
 Run Application
 ===============
-Once you get this message you can open in your browser http://localhost:3000 and there comes the app, login in Admin panel with username "admin" and password "123"		 
+Once you get this message you can open in your browser [http://localhost:3000] (http://localhost:3000/)  and  there comes the index page, 
+login in Admin panel with username "admin" and password "123"		 
  

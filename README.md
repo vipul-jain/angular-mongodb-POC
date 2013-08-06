@@ -6,9 +6,11 @@ Install [mongo DB] (http://www.mongodb.org/downloads) & open command prompt
 Create Database 
 ===============
 1. Create a database named 'samajseva' 
-
+````
      use samajseva
+
      db.admin.save( {username:"admin",password="123"})
+````     
 
 2. This will create a database named samajseva with a colletion named admin having username as "admin" and password as "123"
 
@@ -17,13 +19,16 @@ Express server configuration
 
 1. Open node.js 
 2. Make sure you have youe express server configured
-
+````
      npm install express -g
+````     
 
 3. Then in node.js command prompt supply the path till app.js directory
-	
+````	
 	CD ~\angular-mongodb-POC\
+
 	node app.js
+````
 
 4. And if everything goes fine you will see the following message  
  ````
@@ -73,7 +78,7 @@ Express server configuration
 		================================================================================
 		========
 		Express server listening on port 3000
-		 connected to 'samajseva' db````
+		 connected to 'samajseva' db
 
 
 Run Application

@@ -1,0 +1,326 @@
+<div class="hero-unit">
+<form name="membershipForm">
+    <div class="fluid row">
+        <div class="span5">
+            Form No
+        </div>
+        <div class="span7">
+            <input type="text"  ng-disabled="formNoDisable" name="txtMemFormNo" placeholder="Form Number" ng-model="memberAdd.formno" required> </input>
+            <span class="error" ng-show="membershipForm.txtMemFormNo.$error.required">Required!</span>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5 offset4">
+            <span class="formtitle" >Personal Details</span>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="fluid row">
+		<div class="span3">
+			Name (Head of the Family)
+		</div>
+		<div class="span3">
+			<input type="text" style="width:100%" placeholder="SurName" name="txtMemSurname" ng-model="memberAdd.surname" required></input>
+			<span class="error" ng-show="membershipForm.txtMemSurname.$error.required">Required!</span>	
+		</div>
+		<div class="span3">
+			<input type="text" style="width:100%" placeholder="Name" name="txtMemName" ng-model="memberAdd.name" required></input>
+			<span class="error" ng-show="membershipForm.txtMemName.$error.required">Required!</span>
+		</div>
+		<div class="span3">
+			<input type="text" style="width:100%" placeholder="Father's Name" name="txtMemFathername" ng-model="memberAdd.fathername" required></input>
+			<span class="error" ng-show="membershipForm.txtMemFathername.$error.required">Required!</span>
+		</div>
+	</div>
+    <div class="fluid row">
+        <div class="span5">
+            Residence Address
+        </div>
+        <div class="span7">
+            <textarea style="width:100%" rows="7" cols="15" name="txtMemResAddress" placeholder="Resisdence Address" ng-model="memberAdd.resaddress" required></textarea>
+            <span class="error" ng-show="membershipForm.txtMemResAddress.$error.required">Required!</span>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Phone No (Residence)
+        </div>
+        <div class="span7">
+            <input type="number" placeholder="Enter Residence Phone no" name="txtResPhoneNo"  ng-model="memberAdd.resphno" required></input>
+            <span class="error" ng-show="membershipForm.txtResPhoneNo.$error.required">Required!</span>
+            <span class="error" ng-show="membershipForm.txtResPhoneNo.$error.number">Not valid number!</span>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Office Address
+        </div>
+        <div class="span7">
+            <textarea style="width:100%" rows="7" cols="15" name="txtMemOffAddress" placeholder="Office Address" ng-model="memberAdd.offaddress" required></textarea>
+            <span class="error" ng-show="membershipForm.txtMemOffAddress.$error.required">Required!</span>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Phone No (Office)
+        </div>
+        <div class="span7">
+            <input type="number" placeholder="Enter Office Phone no" name="txtOffPhoneNo"  ng-model="memberAdd.offphno" required></input>
+            <span class="error" ng-show="membershipForm.txtOffPhoneNo.$error.required">Required!</span>
+            <span class="error" ng-show="membershipForm.txtOffPhoneNo.$error.number">Not valid number!</span>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Fax
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" name="txtMemFax" placeholder="Fax" ng-model="memberAdd.fax"></input>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Business
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" name="txtMemBusiness" placeholder="Business" ng-model="memberAdd.business"></input>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            WebSite
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" name="txtMemWebsite" placeholder="Enter Website" ng-model="memberAdd.website"></input>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Email
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" name="txtMemEmail" placeholder="Enter Email" ng-model="memberAdd.email"></input>
+             <span class="error" ng-show="membershipForm.txtMemEmail.$error.email"> Not valid email! </span>
+        </div>
+    </div>
+    <br/>
+
+    <div class="fluid row">
+        <div class="span5 offset4">
+            <span class="formtitle" > Village Details </span>
+        </div>
+    </div>
+    <hr/>
+    <div class="fluid row">
+        <div class="span5">
+            Village Residence Address
+        </div>
+        <div class="span7">
+            <textarea style="width:100%" rows="7" cols="15" name="txtMemVillageRescAddress" placeholder="Village Residence Address" ng-model="memberAdd.vilagerescaddress" required></textarea>
+            <span class="error" ng-show="membershipForm.txtMemVillageRescAddress.$error.required">Required!</span>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5">
+            Pin Code
+        </div>
+        <div class="span7">
+            <input type="number" placeholder="Pin Code 6 Digit strictly " name="txtMemVillagePinCode" ng-model="memberAdd.vilagepincode" min="100000" max="999999" required> </input>
+            <span class="error" ng-show="membershipForm.txtMemVillagePinCode.$error.required">Required!</span>
+            <span class="error" ng-show="membershipForm.txtMemVillagePinCode.$error.number">Not valid pincode!</span>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5">
+            Phone no
+        </div>
+        <div class="span7">
+            <input type="number" placeholder="Village Phone Number" name="txtMemVillagePhno" ng-model="memberAdd.vilagephno"> </input>
+            <span class="error" ng-show="membershipForm.txtMemVillagePhno.$error.number">Not valid No.!</span>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5">
+            Mobile
+        </div>
+        <div class="span7">
+            <input type="number" placeholder="Village Mobile Number" name="txtMemVillageMobile" ng-model="memberAdd.vilagemobile"> </input>
+            <span class="error" ng-show="membershipForm.txtMemVillageMobile.$error.number">Not valid Mobile!</span>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5 offset4">
+            <span class="formtitle" > Contact Details </span>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="fluid row">
+        <div class="span5">
+            Contact Person
+        </div>
+        <div class="span7">
+            <input type="text" placeholder="Enter Contact Person Name"  ng-model="contactname"></input>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5">
+            Phone No
+        </div>
+        <div class="span7">
+            <input type="text" placeholder="Enter Phone no" ng-model="contactno"></input>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5 offset3">
+            <input type="button" class="btn btn-success" ng-click="AddContact()" value="Okay" ></input>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" class="btn btn-danger" ng-click="CancelContact()" value="Cancel" ></input>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="fluid row">
+        <div class="gridStyle" ng-grid="Contacts">
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5 offset4">
+            <span class="formtitle" > Family Details </span>
+        </div>
+    </div>
+    <hr/>
+
+    <div class="fluid row">
+        <div class="span5">
+            Name
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" placeholder="Name of Member" ng-model="Fmember.name"></input>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Father/Husband Name
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" placeholder="Father/Husband Name" ng-model="Fmember.fhname"></input>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Gender
+        </div>
+        <div class="span7">
+            <input type="radio" ng-model="Fmember.gender" value="M"> Male     &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" ng-model="Fmember.gender" value="F"> Female
+        </div>
+    </div>
+    <div class="fluid row" style="padding-top: 5px;">
+        <div class="span5">
+            Date of Birth
+        </div>
+        <div class="span7">
+            <div class="input-append date" id="dob"  data-date="01-01-2000" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
+                <input class="span2" style="width:100%" type="text" id = "mdob" ng-model="Fmember.dob" value="01-01-2000" readonly>
+                <span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Education
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" placeholder="Education" ng-model="Fmember.education"></input>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Maritial Status
+        </div>
+        <div class="span7">
+            <input type="radio" ng-model="Fmember.maritialstatus" ng-change="married(Fmember.maritialstatus)" value="Y"> Married     &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" ng-model="Fmember.maritialstatus" ng-change="married(Fmember.maritialstatus)" value="N"> UnMarried
+        </div>
+    </div>
+    <div class="fluid row" style="padding-top: 5px;" ng-show="showmarriagedate">
+        <div class="span5">
+            Date of Marriage
+        </div>
+        <div class="span7">
+            <div class="input-append date" id="marriagedt"  data-date="01-01-2010" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
+                <input class="span2" style="width:100%" type="text" id="marrdt" ng-model="Fmember.mdt" value="01-01-2000" readonly>
+                <span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="fluid row" style="padding-top: 5px;">
+        <div class="span5">
+            Maternal
+        </div>
+        <div class="span7">
+            <input type="text" style="width:100%" placeholder="Maternal Name" ng-model="Fmember.maternal"></input>
+        </div>
+    </div>
+    <div class="fluid row">
+        <div class="span5">
+            Blood Group
+        </div>
+        <div class="span7">
+            <select style="width:100%" placeholder="Blood Group" ng-model="Fmember.bloodgroup">
+                <option value=""> N/A </option>
+                <option value="A+"> A+ </option>
+                <option value="A+"> B+ </option>
+                <option value="A+"> AB+ </option>
+                <option value="A+"> o+ </option>
+                <option value="A+"> A- </option>
+                <option value="A+"> B- </option>
+                <option value="A+"> AB- </option>
+                <option value="A+"> o- </option>
+            </select>
+        </div>
+    </div>
+
+    <div class="fluid row">
+        <div class="span5 offset3">
+            <input type="button" class="btn btn-success" ng-click="AddFamilyMember()" value="Okay" ></input>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" class="btn btn-danger" ng-click="CancelFamilyMember()" value="Cancel" ></input>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="fluid row">
+        <div class="gridStyle" ng-grid="FamilyMembers">
+        </div>
+    </div>
+    <br/>
+    <div class="fluid row">
+        <div class="span12" style="color:#a9302a">
+            *Clicking Save Button will Save Your Entire Detail to Server
+        </div>
+    </div>
+    <hr/>
+    <div class="fluid row">
+        <div class="span6 offset3">
+            <input type="button" class="btn btn-success" ng-click="AddMember()" value="Save" > </input>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" class="btn btn-danger" ng-click="CancelMember()" value="Cancel" > </input>
+        </div>
+    </div>
+    <input type="text" style="display:none;" id="IsMemberFormValid" ng-model="membershipForm.$valid"> </input>
+
+</form>	
+</div>

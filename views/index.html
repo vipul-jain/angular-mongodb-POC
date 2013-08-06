@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html ng-app='samajseva'>
+<head>
+<meta charset="ISO-8859-1">
+<title>SamajSeva</title>
+<style>
+	.error{
+		color :red;
+	}
+    .formtitle{
+        text-decoration: underline;
+        font-size: 20px;
+        font-weight: bold;
+        color:#df8505;
+    }
+</style>	
+</head>
+	<body ng-controller="AppCtrl">
+		<br/>
+	    <div class="row-fluid">
+
+			<div class="span2 offset1">
+                <div><img src="/images/noimage.png"></img></div>
+                <div ng-show="LoginPanelShow" ng-controller="LoginCtrl" class="accordion" id="Login">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#Login" href="#Admin">
+                                Admin Login
+                            </a>
+                        </div>
+                        <div id="Admin" class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                                <div>
+                                    <div><i class="icon-user"></i> UserName: </div>
+                                    <input type="text" style="width:90%" placeholder="UserName" ng-model="AdminUserName"></input>
+                                </div>
+                                <div style="padding-top:5px;">
+                                    <div><i class="icon-lock"></i> Password: </div>
+                                    <input type="password" style="width:90%" placeholder="Password" ng-model="AdminPassword"></input>
+                                </div>
+                                <div style="padding-top:5px;" class="row fluid">
+
+                                    <input type="button" class=" span5 offset2 btn btn-success" ng-click="AdminLogin()" value="Login" ></input>
+
+                                    <input type="button" class="span5 btn btn-danger"  value="Cancel" ></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#Login" href="#Member">
+                                Member Login
+                            </a>
+                        </div>
+                        <div id="Member" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <div>
+                                    <div><i class="icon-user"></i> UserName: </div>
+                                    <input type="text" style="width:90%" placeholder="UserName" ng-model="MemberUserName"></input>
+                                </div>
+                                <div style="padding-top:5px;">
+                                    <div><i class="icon-lock"></i> Password: </div>
+                                    <input type="password" style="width:90%" placeholder="Password" ng-model="MemberPassword"></input>
+                                </div>
+                                <div style="padding-top:5px;" class="row fluid">
+
+                                    <input type="button" class=" span5 offset2 btn btn-success" ng-click="MemberLogin()" value="Login" ></input>
+
+                                    <input type="button" class="span5  btn btn-danger"  value="Cancel" ></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="WelcomePanel" class="hero-unit">
+                    <div>
+                        <h3>Welcome {{ ActiveMemberUserType }} </h3>
+                    </div>
+                    <div>
+                        <h4> {{ ActiveMemberUserName }} </h4>
+                    </div>
+                    <div>
+                        <span title="You will be Logged out" style="text-decoration: underline;cursor: pointer;color:#003bb3;" ng-click="logout()"><h5> Log Out </h5> </span>
+                    </div>
+                </div>
+			</div>
+			
+			<div class="span6">
+				<div class="span12">
+					<h1> Siwana Seva Samiti - Surat </h1>
+				</div>
+				<div class="span12">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<ul class="nav">
+								<li class="active"><a href="home">Home</a></li>
+                                <li><a href="membership">Member</a></li>
+								<li><a href="activities">Activities</a></li>
+								<li><a href="aboutus">About Us</a></li>
+								<li><a href="contactus">Contact Us</a></li>
+                                <li   ng-show="AllMember"><a href="viewmembers">View Members</a></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="span12">
+                    <div class="span12">
+					<div ng-view></div>
+                    </div>
+					<div class="row-fluid span12">
+						<div class="span6">
+							<img src="/images/add1.jpg" class="img-polaroid"></img>
+						</div>
+						<div class="span6">
+							<img src="/images/add2.jpg" class="img-polaroid"></img>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span2">
+				<div><img src="/images/add3.jpg" class="img-polaroid"></img></div>
+				<br/>
+				<div><img src="/images/add4.jpg" class="img-polaroid"></img></div>
+			</div>
+		</div>
+			
+	
+
+	<link href="/js/lib/bootstrap/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="/js/lib/bootstrap/datepicker.css" rel="stylesheet">
+	<link href="/js/lib/angularGrid/ng-grid.css" rel="stylesheet">
+	<script src="/js/lib/jquery/jquery-1.9.1.js"></script>
+	<script src="/js/lib/angular/angular.js"></script>
+	<script src="/js/lib/angularGrid/ng-grid-2.0.7.min.js"></script>
+    <script src="/js/lib/angularGrid/ng-grid-flexible-height.js"></script>
+	<script src="/js/appModule.js"></script>
+	<script src="/js/controllers.js"></script>
+    <script src="/js/LoginController.js"></script>
+    <script src="/js/FormController.js"></script>
+	<script src="/js/lib/bootstrap/bootstrap.js"></script>
+    <script src="/js/lib/bootstrap/bootstrap-datepicker.js"></script>
+</body>
+</html>
